@@ -1,6 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Bar, Line } from 'react-chartjs-2';
+import { Chart as ChartJS, CategoryScale } from 'chart.js/auto';
 import supabase from './supabase';
+
+ChartJS.register(CategoryScale);
 
 const Grafica = () => {
     const [datos, setDatos] = useState([]);
